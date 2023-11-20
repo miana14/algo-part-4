@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exo d'Algo(Part 4) - #01 - Les élèves</title>
     <link href="./css/style.css" rel="stylesheet" />
-    <script type="text/javascript" src="./js/eleves.js"></script>
+    <script type="text/javascript" src="./js/eleve.js"></script>
 </head>
 
 <body>
@@ -70,15 +70,26 @@
             // YOUR CODE HERE
             let groupeEleves = [];
 
-            let pierreDupont = new Eleve('pierre', 'dupont', 'kercode');
-            let marieFontaine = new Eleve('marie', 'fontaine', 'cda');
-            let johnHunter = new Eleve('john', 'hunter', 'cdui');
+            let pierreDupont = new Eleve('dupont', 'pierre', 'kercode');
+            let marieFontaine = new Eleve('fontaine', 'marie', 'cda');
+            let johnHunter = new Eleve('hunter', 'john', 'cdui');
 
             groupeEleves.push(johnHunter);
             groupeEleves.push(marieFontaine);
             groupeEleves.push(pierreDupont);
 
-            console.log(marieFontaine)
+            marieFontaine.notes.maths.push(9);
+            johnHunter.notes.maths.push(12);
+
+           /*marieFontaine.notes.algo.push(18);
+            johnHunter.notes.algo.push(17);
+            pierreDupont.notes.algo.push(16);*/
+
+            for (let i=0; i<groupeEleves.length; i++){
+                groupeEleves[i].notes.algo.push(Math.floor(Math.random()*20));
+            }
+
+            marieFontaine.bonjour();
 
         </script>
 </body>
